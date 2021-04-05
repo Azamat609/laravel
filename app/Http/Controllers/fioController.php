@@ -45,19 +45,19 @@ class fioController extends Controller
 
 		if($req->NAME == null)
 		{
-		   	$label = true; $res .= 'Не заполнено поле NAME \n'; 
+		   	$label = true; $res .= 'Не заполнено поле NAME '; 
 		} 
 
 		if($req->FAMILIA == null) 
 		{
 		 	$label = true; 
-			$res .= 'Не заполнено поле FAMILIA \n'; 
+			$res .= 'Не заполнено поле FAMILIA '; 
 		}
 
 		if($req->Dota == null) 
 		{
 			$label = true; 
-		  	$res .= 'Не заполнено поле Dota \n';
+		  	$res .= 'Не заполнено поле Dota ';
 		  
 		} 
 			
@@ -71,6 +71,24 @@ class fioController extends Controller
 		 return response()->json($res);
 		
 	}
+	public function avtorfio(Request $req)
+	{
+		$user = User::where("telephone", $req->telephone)->first();
 
-
+		if($user)
+		{
+			if($req->password == $user->password)
+			{
+				return response()->json('Успешно пройдено ');
+			}
+			else
+			{
+				return response()->json('Неправельный пароль ');
+			}
+		}
+		else 
+		{
+			return response()->json('Неправельный Логин ');
+		}
+	}
 }

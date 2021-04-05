@@ -8,4 +8,5 @@ Route::patch('/updatefio/','fioController@updatefio');
 
 
 Route::patch('/registerfio/','fioController@registerfio');
+Route::patch('/avtorfio/','fioController@avtorfio');
 
