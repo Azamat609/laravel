@@ -10,3 +10,6 @@ Route::patch('/updatefio/','fioController@updatefio');
 Route::patch('/registerfio/','fioController@registerfio');
 Route::patch('/avtorfio/','fioController@avtorfio');
 
+Route::patch('/registerValidate/','fioController@registerValidate');
+Route::patch('/loginValidate/','fioController@loginValidate');
+Route::patch('/logout/','fioController@logout');
