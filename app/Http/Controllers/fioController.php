@@ -97,7 +97,7 @@ class fioController extends Controller
 		}
 	}
 
-
+ 	
 //ошибка  Class 'App\Http\Controllers\fio' not found
 	public function registerValidate(Request $req)
  	{ 
@@ -155,6 +155,9 @@ class fioController extends Controller
  		} 
  		else return response()->json("Введен неверный api_token"); 
  	}
+
+
+ 	
 
 
 

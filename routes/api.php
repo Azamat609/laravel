@@ -13,3 +13,7 @@ Route::patch('/avtorfio/','fioController@avtorfio');
 Route::patch('/registerValidate/','fioController@registerValidate');
 Route::patch('/loginValidate/','fioController@loginValidate');
 Route::patch('/logout/','fioController@logout');
+
+Route::post('/getOvo/','OvoController@getOvo');
+Route::post('/addOvo/','OvoController@addOvo');
+Route::post('/deletOvo/','OvoController@deletOvo');

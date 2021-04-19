@@ -14,4 +14,8 @@ class User extends Authenticatable
     [
         'FAMILIA','NAME', 'Dota','telephone','password','api_token'
     ];
+
+
+
 }
+    
