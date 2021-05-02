@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
-use App\Product;
+use App\Ovo;
 
 class OvoController extends Controller
 {

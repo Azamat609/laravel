@@ -12,7 +12,7 @@ class User extends Authenticatable
     public $table= "fio";
     protected $fillable =
     [
-        'FAMILIA','NAME', 'Dota','telephone','password','api_token'
+        'surname','name', 'dota','telephone','password',
     ];
 
 

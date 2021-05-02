@@ -17,3 +17,5 @@ Route::patch('/logout/','fioController@logout');
 Route::post('/getOvo/','OvoController@getOvo');
 Route::post('/addOvo/','OvoController@addOvo');
 Route::post('/deletOvo/','OvoController@deletOvo');
+
+Route::post('/booking/','fioController@booking');

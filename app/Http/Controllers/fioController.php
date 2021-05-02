@@ -6,6 +6,8 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use App\User;
+use App\Ovo;
+use App\Model;
 
 class fioController extends Controller
 {
@@ -156,6 +158,40 @@ class fioController extends Controller
  		else return response()->json("Введен неверный api_token"); 
  	}
 
+
+ 	public function booking(Request $req)
+    {
+    	$token=$req->header("api_token");
+
+    	if($token==nell)
+    		return response()->json("Вы не авторизованы!");
+
+    	$user = User::where("api_token", $token)->first();
+
+    	if(!$user)
+    		return response()->json("Вы не авторизованы!");
+
+    	$code = Str::upper(Str::random(5));
+
+    	$booking = 
+    	[
+    		'from_date' => $req->from_date,
+    		'from' => $req->from,
+    		'in_fio'=> $user->id,
+    		'code' => $sode,
+    	];
+
+    	if($req->back !=null)
+    	{
+    		$booking['back'] = $req->back;
+    		$booking['back_date'] = $req->back_date;
+    	}
+
+    	booking::create($booking);
+
+    	return response()->json($code);
+
+    }
 
  	
 
